@@ -3,7 +3,7 @@
 ### Prodi : D3 Teknik Informatika-LA
 ### KELAS : A
 # Chapter 1: Introduction
-![alt text](efeae660df5411ee860835daedffe736.map-1.jpg)
+![alt text](asset/efeae660df5411ee860835daedffe736.map-1.jpg)
 ## Introduction
 - Objectives
 - Overview of Operating System Structures
@@ -62,7 +62,7 @@
   - System Boot Process
 
 # Chapter 2: Operating-System Structures
-![alt text](cec67910df5211eea5627981c3bb1fb6.map-1.jpg)
+![alt text](asset/cec67910df5211eea5627981c3bb1fb6.map-1.jpg)
 ## Objectives
 - Describe the services an operating system provides
 - Discuss ways of structuring an operating system

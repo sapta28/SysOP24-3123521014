@@ -23,28 +23,28 @@ Pipeline adalah serangkaian perintah yang dijalankan bersama-sama di shell Unix/
 # PERCOBAAN:
 ## Percobaan 1 : File descriptor
 ### Output ke layar (standar output), input dari system (kernel)
-![alt text](<Screenshot (220)-1.png>)
+![alt text](<asset/Screenshot (220)-1.png>)
 keterangan::perintah ps digunakan untuk Menampilkan informasi tentang proses yang berjalan pada sistem.
 
 ## Output ke layar (standar output), input dari keyboard (standard input)
-![alt text](image.png)
+![alt text](asset/image.png)
 keterangan:perintah cat digunakan untuk Membaca, menggabungkan, dan mencetak isi file teks ke layar atau ke file lain.bila ingin mengakhiri catatan tekan ctrl-d.
 
 ## Input nama direktori, output tidak ada (membuat direktori baru), bila terjadi error maka tampilan error pada layar (standard error)
-![alt text](<Screenshot (222).png>)
+![alt text](<asset/Screenshot (222).png>)
 keterangan:perintah mkdir adalah untuk membuat sebuah direktori baru dan mydir adalah nama direktori ketika perintah diulangi kan menghasislakan pesan error karena direktori sudah ada.
 
 ## Percobaan 2 : Pembelokan (redirection)
 ### Pembelokan standar output
-![alt text](<Screenshot (223).png>)
+![alt text](<asset/Screenshot (223).png>)
 keterangan:teks "Ini adalah teks yang saya simpan ke file myfile.txt" akan disimpan di dalam file myfile.txt, dan tidak akan ditampilkan di terminal.
 
 ### Pembelokan standar input, yaitu input dibelokkan dari keyboard menjadi dari file
-![alt text](<Screenshot (224).png>)
+![alt text](<asset/Screenshot (224).png>)
 keterangan:perintah cat 0< myfile.txt mengambil input untuk perintah cat dari file myfile.txt daripada dari keyboard.Kemudian, perintah cat myfile.txt digunakan untuk menampilkan isi file myfile.txt di terminal.
 
 ### Pembelokan standar error untuk disimpan di file
-![alt text](<Screenshot (225).png>)
+![alt text](<asset/Screenshot (225).png>)
 keterangan : pesan error pada perintah mkdir mydir akan dibelokkan dan dicetak kedalam file barnama myerror.txt.
 
 ### Notasi 2>&1 : pembelokan standar error (2>) adalah identik dengan file descriptor 1.
@@ -52,71 +52,71 @@ keterangan : pesan error pada perintah mkdir mydir akan dibelokkan dan dicetak k
 keterangan:pesan error terjadi katena tidak ada file atau direktori bernama filebaru dan pesan eeror dibelokkan dan dicetak kedalam out.txt
 
 ### Notasi 1>&2 (atau >&2) : pembelokan standar output adalah sama dengan file descriptor 2 yaitu standar error
-![alt text](<Screenshot (227).png>)
+![alt text](<asset/Screenshot (227).png>)
 keterangan :  perintah di atas, > baru digunakan untuk mengalihkan standar output (hasil cat filebaru) ke dalam file baru, dan 2>&1 digunakan untuk mengalihkan standar error ke standar output (yaitu ke file baru). Dengan cara ini, pesan error (jika ada) akan disimpan di dalam file baru juga.
 
 ### Notasi >> (append)
-![alt text](<Screenshot (228).png>)
+![alt text](<asset/Screenshot (228).png>)
 keterangan: Dalam notasi >>, tanda panah ganda (>>) digunakan untuk menambahkan output dari perintah ke akhir file tanpa menghapus isi file yang sudah ada."kata keempat" ke dalam file surat, namun karena menggunakan tanda panah tunggal (>), itu akan menggantikan isi file yang sudah ada dengan teks baru.
 
 ### Notasi here document (<<++ .... ++) digunakan sebagai pembatas input dari keyboard. Perhatikan bahwa tanda pembatas dapat digantikan dengan tanda apa saja, namun harus sama dan tanda penutup harus diberikan pada awal baris
-![alt text](<Screenshot (229).png>)
+![alt text](<asset/Screenshot (229).png>)
 keterangan :Notasi here document (<<) digunakan untuk menentukan teks sebagai input untuk perintah. Dalam kasus Anda, teks tersebut ditampilkan di terminal oleh perintah cat. Tanda pembatas yang Anda pilih (dalam kasus Anda ++ dan %%%) menandakan awal dan akhir dari teks yang dimasukkan.
 
 ### Notasi – (input keyboard) adalah representan input dari keyboard. Artinya menampilkan file 1, kemudian menampilkan input dari keyboard dan menampilkan file 2. Perhatikan bahwa notasi “-“ berarti menyelipkan input dari keyboard
-![alt text](<Screenshot (230).png>)
+![alt text](<asset/Screenshot (230).png>)
 keterangan : perinta cat akan menampilkan isi dari file myfile.txt, kemudian akan meminta input dari keyboard (biasanya dengan menekan Enter setelah memberikan input), dan setelahnya akan menampilkan isi dari file surat.
 
 ## Percobaan 3 : Pipa (pipeline)
 ### Operator pipa (|) digunakan untuk membuat eksekusi proses dengan melewati data langsung ke data lainnya
-![alt text](<Screenshot (231).png>)
-![alt text](<Screenshot (232).png>)
+![alt text](<asset/Screenshot (231).png>)
+![alt text](<asset/Screenshot (232).png>)
 keterangan : menampilkan informasi pengguna dengan perintah who mengurutkan informasi yang didapat yang hasilnya ditampilkan dilayar dan “tmp” digunakan untuk menyimpan output dalam file sementara. daftar file dan direktori ditampilkan dalam “etc” dengan menggunakan “etc” dan mem-pipe hasilnya ke perintah “more” untuk tampilan halaman. Sedangkan beda yan menggunakan sort adalah mengurutkannya, dan kemudian mem-pipe hasilnya ke perintah “more” untuk tampilan halaman.
 
 ### Untuk membelokkan standart output ke file, digunakan operator ">"
-![alt text](<Screenshot (233).png>)
+![alt text](<asset/Screenshot (233).png>)
 keterangan :Dengan menggunakan operator >, output dari perintah echo hello telah berhasil dibelokkan dan disimpan ke dalam file output. Kemudian, perintah cat output menampilkan isi dari file output, yang berisi teks "hello".
 
 ### Untuk menambahkan output ke file digunakan operator ">>"
-![alt text](<Screenshot (234).png>)
+![alt text](<asset/Screenshot (234).png>)
 keterangan : Dengan menggunakan operator >>, output dari perintah echo bye telah berhasil ditambahkan ke dalam file output tanpa menghapus konten yang sudah ada sebelumnya. Kemudian, perintah cat output menampilkan semua isi dari file output, yang berisi teks "hello" diikuti oleh teks "bye".
 
 ### Untuk membelokkan standart input digunakan operator "<"
-![alt text](<Screenshot (235).png>)
+![alt text](<asset/Screenshot (235).png>)
 keterangan : Perintah ini mengambil input dari file output dan memberikannya sebagai input untuk perintah cat. Artinya, isi dari file output akan ditampilkan di terminal oleh perintah cat.
 
 ### Pembelokan standart input dan standart output dapat dikombinasikan tetapi tidak boleh menggunakan nama file yang sama sebagai standart input dan output.
-![alt text](<Screenshot (236).png>)
+![alt text](<asset/Screenshot (236).png>)
 keterangan : terjadi error pada “$ cat < output > output menurut Analisa saya karena file output diubah sehingga file input dan output sama.
 
 ## Percobaan 4 : Filter
 ### Pipa juga digunakan untuk mengkombinasikan utilitas sistem untuk membentuk fungsi yang lebih kompleks
-![alt text](<Screenshot (237).png>)
-![alt text](<Screenshot (238).png>)
+![alt text](<asset/Screenshot (237).png>)
+![alt text](<asset/Screenshot (238).png>)
 keterangan: mencari informasi user dengan menggunakan perintah “ who | grep user” kemudian dilanjut “/etc/passwd” mencari informasi user dalam file untuk user harus diinputkan dengan valid tanpa menggunakan <> agar bisa terbaca oleh system. Menghitung jumlah file dan direktori dalam direktori ” ls /etc | wc -l” .”cat kelas1.txt”dan “cat kelas2.txt” untuk menampilkan isinya.”cat kelas1.txt kelas2.txt | sort “ untuk Menggabungkan, mengurutkan, dan menampilkan isi dari dua file kelas itu.menggabungkan dua file it uke dalam file baru kelas.txt dengan menggunakan perintah “cat kelas1.txt kelas2.txt > kelas.txt”. Menampilkan isi dari file “kelas.txt” yang telah digabungkan dan diurutkan, serta menghapus baris duplikat dan hasil akhir proses dengan “ cat kelas.txt”
 
 ## LATIHAN:
 ### Lihat daftar secara lengkap pada direktori aktif, belokkan tampilan standard output ke file baru.
-![alt text](<Screenshot (239).png>)
+![alt text](<asset/Screenshot (239).png>)
 keterangan : perintah ls untuk menampilkan file secara umum dan perintah -la untuk menampilkan file secara detail dan dibelokkan dengan operator > dengan perintah untuk membuat file baru Bernama filebaru.txt.
 
 ### Lihat daftar secara lengkap pada direktori /etc/passwd, belokkan tampilan standard output ke file baru tanpa menghapus file baru sebelumnya.
-![alt text](<Screenshot (240).png>)
+![alt text](<asset/Screenshot (240).png>)
 keterangan: mengambil isi dari file “/etc/passwd” dan menambakannya ke dalam file “namafile.txt”.jika file belum pernah dibuat maka file baru akan dibuat.
 
 ### Urutkan file baru dengan cara membelokkan standard input.
-![alt text](<Screenshot (241).png>)
-![alt text](<Screenshot (242).png>)
- ![alt text](<Screenshot (243).png>) 
- ![alt text](<Screenshot (244).png>)
+![alt text](<asset/Screenshot (241).png>)
+![alt text](<asset/Screenshot (242).png>)
+ ![alt text](<asset/Screenshot (243).png>) 
+ ![alt text](<asset/Screenshot (244).png>)
  keterangan :namafile.txt yang berisi daftar nama yang tidak urut abjadnya jika diberi perintah sort akan menjadi urut berawal dari huruf A nama file tetap.
 
  ### Urutkan file baru dengan cara membelokkan standard input dan standard output ke file baru.urut.
- ![alt text](<Screenshot (245).png>)
+ ![alt text](<asset/Screenshot (245).png>)
  keterangan:namafile.txt yang berisi daftar nama yang tidak urut abjadnya jika diberi perintah sort akan menjadi urur berawal dari huruf A dan saya ganti nama filenya menjadi urut.txt.
 
  ### Buatlah direktori latihan 2 sebanyak 2 kali dan belokkan standard error ke file rmdirerror.txt.
- ![alt text](<Screenshot (246).png>) 
+ ![alt text](<asset/Screenshot (246).png>) 
  keterangan : membuat 2 file latihan terjadi error dan pesan error akan masuk ke fike rmdirerror.txt.
 
  ### Urutkan kalimat berikut :
@@ -126,15 +126,15 @@ keterangan: mengambil isi dari file “/etc/passwd” dan menambakannya ke dalam
 #### Padang
 #### Palembang
 #### Lampung
-![alt text](<Screenshot (247).png>)
+![alt text](<asset/Screenshot (247).png>)
 keterangan:: mengurutkan dengan perinta sort dan menggunakan notasi note here document.
 
 ### Hitung jumlah baris, kata dan karakter dari file baru.urut dengan menggunakan filter dan tambahkan data tersebut ke file baru.
-![alt text](<Screenshot (248).png>)
+![alt text](<asset/Screenshot (248).png>)
 keterangan : file dengan nama ucapan.txt denga nisi “selamat belajar system operasi” diberi perintah wc nama file akan muncul jumlah baris,kata ,dan karakter kemudian hasil dicetak ke file baru Bernama statistik.txt yang didalamnya  berisi hasil dari perinta wc ucapan.txt.
 
 ### Gunakan perintah di bawah ini dan perhatikan hasilnya
-![alt text](<Screenshot (249).png>)
+![alt text](<asset/Screenshot (249).png>)
 keterangan: perintah pertama membuat file dengan nama “hello.txt” perintah kedua mengurutkan dengan perintah sort dan uniq untuk perintah ketiga itu menampilkan dog tetapi tidak ada cat dengan menggunakan perintah grep dan operator -v untuk pengecualian
 
 ## kesimpulan

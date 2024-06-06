@@ -3,7 +3,7 @@
 ### Prodi : D3 Teknik Informatika-LA
 ### KELAS : A
 # 1.ERD diagram proses booting
-![alt text](<erd booting.png>)
+![alt text](<asset/erd booting.png>)
 # 2.. Step Step Proses Booting : 
 - PC Dinyalakan 
 ### Menyalakan komputer dengan cara menekan tombol fisik ON komputer, saat itulah proses booting dimulai.
@@ -26,7 +26,7 @@
 # 3.Identifikasi Leptop:
 
 - CPU
-![alt text](cpu.png)
+![alt text](asset/cpu.png)
 ### Name CPU : Intel Core i5
 
 ### Code Name : Intel Skylake adalah mikroarsitektur prosesor yang pertama kali diperkenalkan oleh Intel pada tahun 2015. Sebagai bagian dari siklus perbaruan berkelanjutan dalam teknologi komputasi, Skylake menggantikan mikroarsitektur Broadwell yang sebelumnya.
@@ -38,27 +38,27 @@
 ### Memilki 2 Core dan 4 Threads. Core dan thread merupakan komponen yang dari CPU, core bertugas untuk melakukan dan mengeksekusi tugas, sedangkan thread berfungsi untuk memecah beban kerja core untuk meningkatkan efisiensi dan performa CPU.
 
 - MAINBOARD
-![alt text](mainboard.png)
+![alt text](asset/mainboard.png)
 ### Chipset: : Intel skyLake-U dengan Southbridge skyLake-Y PCH  fungsi PCH pada chipset Skylake-U dan Skylake-Y mencakup manajemen berbagai aspek dalam sistem, memastikan koordinasi dan pengaturan yang tepat antar-komponen untuk mendukung operasi yang efisien dan andal pada perangkat bergerak.
 
 - MEMORY
-![alt text](memory.png)
+![alt text](asset/memory.png)
 ### TYPE MEMORY DDR 4 : DDR4 adalah singkatan dari "Double Data Rate 4”, dan merupakan generasi keempat dari teknologi DDR, yang menggantikan SDRAM SDR (Single Data Rate). DDR4 memiliki tingkat transfer data yang lebih cepat, kapasitas yang lebih besar, dan voltase lebih rendah dibandingkan generasi sebelumnya.
 
 ### Size Ram yang saya pakai adalah 8 GB dan Memiliki Chanel singel, Chanel adalah komponen yang berguna sebagai jalur komukasi untuk mengakses data yang akan disimpan sementara di RAM.
 
 - SPD
-![alt text](spd.png)
+![alt text](asset/spd.png)
 ### Memiliki 2 slot memori dengan kecepatan DDR 4(DDR4 memiliki tingkat transfer data yang lebih cepat, kapasitas yang lebih besar, dan voltase lebih rendah dibandingkan generasi sebelumnya.)
 
 ### tipe memori yang di pakai di laptop ini adalah micron technology.
 
 - GRAPHICS
-![alt text](GRAPHICS.png)A
+![alt text](asset/GRAPHICS.png)A
 ### GPU yang di pakai i5 Version: **Intel® HD Graphics 520**
 
 - BENCH
- ![alt text](bench.png)
+ ![alt text](asset/bench.png)
  ### BENCH untuk melakukan uji coba kecepatan skor prosesor dengan prosesor yang lain 
 
 
